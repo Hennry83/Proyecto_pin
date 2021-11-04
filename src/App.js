@@ -1,12 +1,25 @@
 import logo from './logo.svg';
-//import './App.css';
-import './App2.scss';
+import './assets/css/styles.scss';
+import Header from './components/Header/Header';
+import About from './components/About/About';
+import Products from './components/Products/Products';
+import Services from './components/Services/Services';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+
+
 
 function App() {
   return (
-    <div className="my_clase">
-        Hola Todos!!!
+    <div>
+        <Header/>
+        <About/>
+        <Products/>
+        <Services/>
+        <Contact/> 
+        <Footer/>
     </div>
+
   );
 }
 

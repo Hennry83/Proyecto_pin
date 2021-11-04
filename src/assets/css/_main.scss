@@ -1,0 +1,209 @@
+/*  CONTAINER 2 - ABOUT - */
+#about {
+    background: $color-primary;
+    border-left: 32px solid $color-brand;
+    margin: 144px 0px;
+    width: 100vw;
+    //height: 384px;
+    height:60vh ;
+}
+
+#about h2 {
+    font-family: $font-brand;
+    font-size: 39px;
+    padding-left: 267px;
+    padding-top: 23px;
+    color: $color-secondary;
+    b {
+        color: $color-brand;
+    }
+}
+
+.section__textsecondary {
+    padding-top: 44px;
+    padding-left: 267px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: $color-secondary;
+    font-family: $font-secondary;
+}
+
+
+/*  CONTAINER 3 - PRODUCTS -*/
+
+#product {
+    width: 100%;
+    height: 768px;
+    background: $bg-secondary;
+    position: relative; 
+    z-index: 1;
+}
+
+.product__bgsecondary {
+    left: 968px; 
+    width: 398px;
+    height: 768px;
+    background-color: $bg-terciary;
+    position:absolute; 
+    z-index: 2;
+}
+
+.product__imgcasa {
+    background-image: url("../imagenes/section3-image.png");
+    width: 966px;
+    height: 552px;
+    margin-left: 200px;
+    margin-top: 112px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse; 
+    position: absolute;
+    z-index: 3;
+}
+
+.product__contenido {
+    width: 471px;
+    height: 304px;
+    background-color: $color-brand;
+    z-index: 4;
+}
+
+.product__p1 {
+    color: $color-primary;
+    margin-left: 50px;
+    margin-top: 68px;
+    font-family: $font-brand;
+    font-size: 16px;
+}
+
+h1 {
+    color: $color-primary;
+    font-family: $font-brand;
+    font-size: 39px;
+    margin-left: 50px;
+}
+
+.product__p2 {
+    color: $color-primary;
+    margin-left: 50px;
+    margin-top: 8.5px;
+    font-size: 16px;
+}
+
+#flechas {
+    display: flex;
+    flex-direction: row-reverse;
+    /* align-self: flex-end;  */
+    margin-right: 49px;
+    margin-top: 46px;
+    .flecha_r {
+        margin-left: 10px;
+    }    
+    z-index: 5;
+}
+
+/*  CONTAINER 4 - SERVICES - */
+
+#services{
+    width: 100vw;
+    height: 100vh;
+    position: relative; 
+    z-index: 1;   
+}
+
+.services__image{
+    /* background-image: url("../images/section4-image.png"); */
+    width: 770px;
+    height: 768px;
+    /* margin-left: 596px */;
+     left: 596px; 
+   /*  position:relative; */
+    /* left: 596px; */
+    position:absolute;
+    z-index: 2;  
+
+}
+
+ #datos{
+  width:55%;
+  padding-left: 101px;
+  padding-top: 144px;
+  position: absolute;
+  z-index: 3;
+  p{
+      color: #5F6368;
+  }
+}
+
+.accordion-button {
+    font-size: 16px;
+    border: 1px solid #E3E3E3;
+    //border-radius: 8px 8px 0px 0px;
+    background-color: #F8F8F8;
+    color:#5F6368;
+    //$accordion-border-radius: 4px 4px 0px 0px;
+    $border-radius: 4px 4px 0px 0px;;
+}
+
+.Texto_Acordion{
+    font-size: 16px;
+    color:#5F6368;
+}
+
+/*  CONTAINER 5 - CONTACT -*/
+
+.contact{
+    width: 100vw;
+    height: 100vh;
+    background: $bg-secondary;
+    position: relative; 
+    z-index: 1;
+}
+
+.contact__bgsecondary{
+    left: 968px; 
+    width: 398px;
+    height: 768px;
+    background-color: $bg-terciary;
+    position:absolute; 
+    z-index: 2;
+}
+
+ #contact h2 {
+    font-family: $font-brand;
+    font-size: 39px; 
+    padding-left: 101px;
+    padding-top: 120px;
+    b {
+        color: $color-brand;
+    }
+}
+
+.contact__image{
+    background-image: url("../imagenes/contact-image.png");
+    width: 594px;
+    height: 400px;
+    left: 671px;
+    top: 192px;
+    position:absolute; 
+    z-index: 2;
+}
+
+.datos__contacto{
+    margin-left: 101px;
+    margin-top: 75px;
+    width: 471px;
+    height: 345px;
+    font-size: 16px; 
+    color: #5F6368;
+}
+
+.form-control{
+    font-size: 14px;
+}
+
+.contact__button {
+    @include button;
+    margin-left: 101px;
+}
+

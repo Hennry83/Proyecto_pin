@@ -1,0 +1,24 @@
+#footer{
+    background: $color-secondary;
+     width: 1366px;
+    height: 96px; 
+    margin-top: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    p{
+        width: 15vw; //195px;
+        height: 5vh; //21px;
+        margin-left:  101px;
+        color: $bg-terciary;
+        font-size: 1.6rem;
+    }
+}
+
+.footer_image{
+    width: 86px;
+    height: 20px;
+    margin-right: 100px;
+    justify-content: flex-end;
+}

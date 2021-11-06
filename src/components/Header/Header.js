@@ -20,7 +20,8 @@ export default function Header() {
                     </nav>
                 </div>
                 <h1 className="header__textprimary">Sed ut perspiciatis <br />
-                    unde omnis iste natus</h1>
+                    unde omnis iste natus
+                </h1>
 
                 <p className="header__textsecondary">
                     Sed ut perspiciatis unde omnis iste natus error <br />

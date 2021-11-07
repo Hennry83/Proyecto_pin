@@ -54,7 +54,7 @@ export default function Slider() {
                     <ul>
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#product">Product</a></li>
+                        <li><a href="#product2">Product</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>

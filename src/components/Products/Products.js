@@ -1,4 +1,3 @@
-import react from "react"
 import '../../assets/css/styles.scss'
 import flecha1 from '../../assets/imagenes/Icon feather-arrow-right-circle.png'
 import flecha2 from '../../assets/imagenes/Icon feather-arrow-left-circle.png'

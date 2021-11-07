@@ -6,13 +6,15 @@ import Products from './components/Products/Products';
 import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Slider from './components/Slider/Slider';
 
 
 
 function App() {
   return (
     <div>
-        <Header/>
+        <Slider/>
+        {/* <Header/> */}
         <About/>
         <Products/>
         <Services/>

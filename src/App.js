@@ -7,8 +7,8 @@ import Services from './components/Services/Services';
 import Footer from './components/Footer/Footer';
 import Slider from './components/Slider/Slider';
 import Products2 from './components/Products2/Products2';
-import SendForm from './components/Contact/SendForm';
-//import Formulario from './components/Contact/Formulario';
+//import SendForm from './components/Contact/SendForm';
+import Formulario from './components/Contact/Formulario';
 
 
 
@@ -22,8 +22,8 @@ function App() {
         {/* <Products/> */}
         <Services/>
         {/* <Contact/>  */}
-        <SendForm/>
-        {/* <Formulario/> */}
+         {/* <SendForm/> */} 
+         <Formulario/> 
         <Footer/>
     </div>
 

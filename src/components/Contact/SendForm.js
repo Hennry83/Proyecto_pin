@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import Contact from './Contact';
+//import Formulario from './Formulario';
 
 export default () => {
 
@@ -11,11 +12,11 @@ export default () => {
         message : "",
     });
 
-    const handleChange = (event) => {
+    /* const handleChange = (event) => {
         const property  = event.target.name
         const value  = event.target.value
         setFormData({...formData,[property]:value})
-    }
+    } */
 
     const handleChangeName = (event) => {
         const name = event.target.value
@@ -37,15 +38,17 @@ export default () => {
          setFormData({...formData, message})
       }  
 
-      console.log(formData)
+      //console.log(formData)
 
       const handleSubmit = ()=>{
         const sendData = async () => {
+            console.log(formData)
             try{
              const response = await axios({
                 method: 'POST',
-                url:  `http://127.0.0.1:8000/api/probando`,
-                formData               
+                formData,    
+                url:  `http://127.0.0.1:8000/api/grabando`
+
              })
              console.log(response)
             }catch(err){

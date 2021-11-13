@@ -1,53 +1,116 @@
-import '../../assets/css/styles.scss'
-import {Form}  from 'react-bootstrap'
-import { useState } from 'react'
+import {useState} from 'react';
+import axios from 'axios';
+import {Form,FloatingLabel}  from 'react-bootstrap';
+import '../../assets/css/styles.scss';
 
-export default function Formulario() {
-    
-    const [formData,setFormData] = useState({
-        name:""
-    })
 
-    const probando = (event) => {
-       
-         const name = event.target.value
-         console.log(name); 
-       // setFormData({...formData, name})
-     }
-     
-     const handleChangeName = (event) => {
-        const name = event.target.value
-        setFormData({...formData, name})
-     } 
-     console.log(formData)
-     
+export default () => {
+
+    const [formData, setFormData] = useState({
+        name : "",
+        email : "",
+        phone :"",
+        message : ""
+    });
+
+    const handleChange = (event) => {
+        const clave  = event.target.name;
+        const valor  = event.target.value;
+
+        setFormData({...formData,[clave]:valor});
+    }; 
+
+    const handleSubmit = ()=>{
+      //console.log('blablablalblal')
+      console.log(formData);
+      const sendData = async () => {
+        try{
+          console.log(formData);
+          const response = await axios.post(
+            "http://127.0.0.1:8000/api/altausuario",
+            //"http://127.0.0.1:8000/api/grabando",            
+            formData
+          );
+          console.log(response);
+          }catch(err){
+           console.log(err);
+          }
+        };
+
+         sendData();
+         setFormData({
+             name : "",
+             email : "",
+             phone :"",
+             message : ""
+         });
+    };
+
+    console.log(formData);
+
     return (
-    <div id="contact" className="contact">
-      <div className="contact__bgsecondary">
-      </div>
-      <div className="contact__image">
-      </div>
-      <div> 
-        <h2>Get in touch <br/><b>We are hiring!</b></h2>
-      </div>
-      <div className="datos__contacto">
-        <Form>
-          <Form.Label>Full Name</Form.Label>
-          <Form.Control type="text" placeholder="Name" onChange={handleChangeName}/>
-          <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
-          </Form.Group>
-          <Form.Label>Phone</Form.Label>
-          <Form.Control type="text" placeholder="Enter Number Phone" />
-          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" rows={3} />
-          </Form.Group>
-        </Form> 
-      </div> 
-      <button className="contact__button" onClick={probando} >Send</button>
-    </div>
-
-    )
-}
+        <div>
+            <div id="contact" className="contact">
+              <div className="contact__bgsecondary">
+              </div>
+              <div className="contact__image">
+              </div>
+              <div> 
+                <h2>Get in touch <br/><b>We are hiring!</b></h2>
+              </div>
+              <div className="datos__contacto">
+                <FloatingLabel
+                  controlId="floating-inp"
+                  label="Name"
+                  lassName="tt mb-4"
+                >
+                  <Form.Control
+                   type="text"
+                   placeholder="###"
+                   name="name"
+                   onChange={handleChange}
+                   />
+                </FloatingLabel>
+                <FloatingLabel
+                    controlId="floating-inp"
+                    label="Email"
+                    className="mb-4"
+                >
+                  <Form.Control
+                    type="email"
+                    placeholder="###"
+                    name="email"
+                    onChange={handleChange}
+                    />
+                </FloatingLabel>
+                <FloatingLabel
+                   controlId="floating-inp"
+                   label="Phone"
+                   className="mb-4"
+                >
+                  <Form.Control
+                    type="phone"
+                    placeholder="###"
+                    name="phone"
+                    onChange={handleChange}
+                  />
+                </FloatingLabel>
+                <FloatingLabel
+                  controlId="floating-inp"
+                  label="Message"
+                  className="mb-4"
+                >
+                  <Form.Control
+                     as="textarea"
+                     placeholder="###"
+                     style={{ height: "10rem", paddingTop: "2rem" }}
+                     name="message"
+                     onChange={handleChange}
+                  />
+                </FloatingLabel> 
+                <button className="contact__button" onClick={handleSubmit} >Send</button>
+              </div> 
+            </div>
+        </div>        
+    );
+};

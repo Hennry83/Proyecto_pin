@@ -27,8 +27,7 @@ export default () => {
         try{
           console.log(formData);
           const response = await axios.post(
-            "http://127.0.0.1:8000/api/altausuario",
-            //"http://127.0.0.1:8000/api/grabando",            
+            "http://127.0.0.1:8000/api/altausuario",            
             formData
           );
           console.log(response);

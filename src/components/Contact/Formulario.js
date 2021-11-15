@@ -27,7 +27,7 @@ export default () => {
         try{
           console.log(formData);
           const response = await axios.post(
-            "https://back-25watts.herokuapp.com/",
+            "https://back-25watts.herokuapp.com/api/altausuario",
             //"http://127.0.0.1:8000/api/altausuario",            
             formData
           );

@@ -70,6 +70,7 @@
     align-items: center;
     padding-bottom: 33px;
     position: absolute;
+    //position: fixed;
 }
 
 .nav__img {
@@ -79,8 +80,9 @@
     margin-top: 33px;
 }
 
-nav {
+.navbar {
   margin-right: 110px;
+  background: transparent;
   ul{
       display: flex; 
     }
@@ -90,13 +92,17 @@ nav {
       margin-left: 55px;
       margin-top: 33px; 
     } 
+}
 
-  a{
-      text-decoration: none;
-      font-size: 1.6rem;
-      color: $color-primary;
-      font-family: $font-secondary;
-  }
+.navbar.active {
+  background: #343434;
+}
+
+.navegacion{
+  text-decoration: $color-brand;
+  font-size: 1.6rem;
+  color: $color-primary;
+  font-family: $font-secondary;
 }
   
 .container_texto{

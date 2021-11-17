@@ -3,8 +3,11 @@ import '../../assets/css/styles.scss'
 //import BtnSlider from  './BtnSlider'
 import dataSlider from './dataSlider'
 import logo from '../../assets/imagenes/top-logo.png'
+import {Link} from 'react-scroll'
 
 export default function Slider() {
+
+    const[navbar,setNavbar] = useState(false);
 
     const [slideIndex, setSlideIndex] = useState(1)
 
@@ -30,6 +33,16 @@ export default function Slider() {
         setSlideIndex(index)
     }
 
+    const changeBackground = ()=>{
+        if(window.scrollY >= 150){
+            setNavbar(true);
+        }else{
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll',changeBackground);
+
     return (
         <div className="container-slider">
             {dataSlider.map((obj, index) => {
@@ -50,13 +63,13 @@ export default function Slider() {
             
             <div className="div__nav">
                 <img className="nav__img" src= {logo} alt="logo 25 watts" />
-                <nav> 
+                <nav className= {navbar ? 'navbar active' : 'navbar'}> 
                     <ul>
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#product2">Product</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><Link className="navegacion" to="header" smooth={true} duration={2000}>Home</Link></li>
+                        <li><Link className="navegacion" to="about" smooth={true} duration={2000}>About</Link></li>
+                        <li><Link className="navegacion" to="product2" smooth={true} duration={2000}>Product</Link></li>
+                        <li><Link className="navegacion" to="services" smooth={true} duration={2000}>Services</Link></li>
+                        <li><Link className="navegacion" to="contact" smooth={true} duration={2000}>Contact</Link></li>
                     </ul>
                 </nav>
             </div>

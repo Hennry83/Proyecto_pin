@@ -291,11 +291,79 @@ h1 {
     height: 345px;
     font-size: 16px; 
     color: #5F6368;
+    .alturaTxt{
+        input{
+            height: 5.5rem;
+        }
+    }
 }
 
 .form-control{
     font-size: 14px;
 }
+
+.txt-nook {
+    border: 1px solid red;
+  }
+  
+  .txt-ok {
+    border: 1px solid blue;
+  }
+
+  .message__successUnsuccess{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    background-color: $color-brand;
+  }
+
+  .alerta_msj {
+    min-width: 40%;
+    align-self: center;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $color-brand;
+  }
+
+  .enviando_msj {
+    color:#343434;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 2px;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 10px;
+    line-height: 20px;
+  }
+
+  .boton_cerrar {
+    opacity: 0.8;
+    background: #343434;
+    color: black;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5px;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: 10px;
+    line-height: 20px;
+  }
+
+  .texto_exitoso {
+    color:#343434;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1px;
+    font-size: 14px;
+    text-align: left;
+    letter-spacing: 10px;
+    line-height: 20px;
+  }
 
 .contact__button {
     @include button;

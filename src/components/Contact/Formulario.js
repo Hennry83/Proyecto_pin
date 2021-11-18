@@ -84,7 +84,6 @@ export default () => {
         try {
           const response = await axios.post(
             "https://back-25watts.herokuapp.com/public/api/altausuario",
-            //"http://127.0.0.1:8000/api/altausuario",
             formData
           );
           setEstadoEnvio(response.status);
@@ -106,7 +105,7 @@ export default () => {
       setValidMessage(false);
     }
   };
-
+    //"http://127.0.0.1:8000/api/altausuario",
   return (
     <div>
       {!banderaForm ?

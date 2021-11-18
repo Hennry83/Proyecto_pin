@@ -60,7 +60,7 @@
     transform: translateY(-60%);
   } */
 
-  .div__nav {
+  .div_nav {
     display: flex;
     width: 100%;
     height: auto;
@@ -69,8 +69,14 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 33px;
-    position: absolute;
-    //position: fixed;
+    //position: absolute;
+    position: fixed;
+    z-index: 4;
+    background: transparent;
+}
+
+.div_nav.active {
+  background: #343434;
 }
 
 .nav__img {
@@ -82,7 +88,7 @@
 
 .navbar {
   margin-right: 110px;
-  background: transparent;
+  //background: transparent;
   ul{
       display: flex; 
     }
@@ -92,10 +98,6 @@
       margin-left: 55px;
       margin-top: 33px; 
     } 
-}
-
-.navbar.active {
-  background: #343434;
 }
 
 .navegacion{

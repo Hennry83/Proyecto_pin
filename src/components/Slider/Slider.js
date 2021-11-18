@@ -44,7 +44,7 @@ export default function Slider() {
     window.addEventListener('scroll',changeBackground);
 
     return (
-        <div className="container-slider">
+        <div className="container-slider" id="slider">
             {dataSlider.map((obj, index) => {
                 return (
                     <div
@@ -61,11 +61,11 @@ export default function Slider() {
             {/* <BtnSlider moveSlide={nextSlide} direction={"next"} />
             <BtnSlider moveSlide={prevSlide} direction={"prev"}/> */}
             
-            <div className="div__nav">
+            <div className= {navbar ? 'div_nav active' : 'div_nav'}>
                 <img className="nav__img" src= {logo} alt="logo 25 watts" />
-                <nav className= {navbar ? 'navbar active' : 'navbar'}> 
+                <nav> 
                     <ul>
-                        <li><Link className="navegacion" to="header" smooth={true} duration={2000}>Home</Link></li>
+                        <li><Link className="navegacion" to="slider" smooth={true} duration={2000}>Home</Link></li>
                         <li><Link className="navegacion" to="about" smooth={true} duration={2000}>About</Link></li>
                         <li><Link className="navegacion" to="product2" smooth={true} duration={2000}>Product</Link></li>
                         <li><Link className="navegacion" to="services" smooth={true} duration={2000}>Services</Link></li>

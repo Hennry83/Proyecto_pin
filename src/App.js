@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './assets/css/styles.scss';
-import Slider from './components/Slider/Slider';
+import Header from './components/Header/Header';
 import About from './components/About/About';
 import Products2 from './components/Products2/Products2';
 import Services from './components/Services/Services';
-import Formulario from './components/Contact/Formulario';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 
@@ -13,11 +13,12 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div>
-        <Slider/>
+        <Header/>
         <About/>
         <Products2/>
         <Services/>
-        <Formulario/> 
+        <Contact/>
+        {/* <Formulario/> */} 
         <Footer/>
     </div>
 

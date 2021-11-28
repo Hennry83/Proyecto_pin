@@ -63,13 +63,13 @@ export default function Slider() {
             
             <div className= {navbar ? 'div_nav active' : 'div_nav'}>
                 <img className="nav__img" src= {logo} alt="logo 25 watts" />
-                <nav> 
+                <nav className = "navbar"> 
                     <ul>
-                        <li><Link className="navegacion" to="slider" smooth={true} duration={2000}>Home</Link></li>
-                        <li><Link className="navegacion" to="about" smooth={true} duration={2000}>About</Link></li>
-                        <li><Link className="navegacion" to="product2" smooth={true} duration={2000}>Product</Link></li>
-                        <li><Link className="navegacion" to="services" smooth={true} duration={2000}>Services</Link></li>
-                        <li><Link className="navegacion" to="contact" smooth={true} duration={2000}>Contact</Link></li>
+                        <li><Link className="navegacion" to="slider" smooth={true} duration={1000}>Home</Link></li>
+                        <li><Link className="navegacion" to="about" smooth={true} duration={1000}>About</Link></li>
+                        <li><Link className="navegacion" to="product2" smooth={true} duration={1000}>Product</Link></li>
+                        <li><Link className="navegacion" to="services" smooth={true} duration={1000}>Services</Link></li>
+                        <li><Link className="navegacion" to="contact" smooth={true} duration={1000}>Contact</Link></li>
                     </ul>
                 </nav>
             </div>

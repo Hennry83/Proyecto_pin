@@ -1,8 +1,6 @@
 .container-slider {
-    max-width: 100vw;//700px;
-    //height: 100vh;//500px;
+    max-width: 100vw;
     height: 768px;
-    //margin: 100px auto 0;
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -14,7 +12,6 @@
   }
   .slide {
     width: 100%;
-    //height: 100%;
     height: 768px;
     position: absolute;
     opacity: 0;
@@ -22,7 +19,6 @@
   }
   .slide img {
     width: 100%;
-    //height: 100%;
     height: 768px;
     object-fit: cover;
   }
@@ -30,35 +26,6 @@
   .active-anim {
     opacity: 1;
   }
-  
-  /* .btn-slide {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #f1f1f1;
-    border: 1px solid rgba(34, 34, 34, 0.287);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  } */
-  
-/*   .btn-slide img {
-    width: 25px;
-    height: 25px;
-    pointer-events: none;
-  } */
-/*   .prev {
-    top: 50%;
-    left: 20px;
-    transform: translateY(-60%);
-  } */
-/*   .next {
-    top: 50%;
-    right: 20px;
-    transform: translateY(-60%);
-  } */
 
   .div_nav {
     display: flex;
@@ -69,7 +36,6 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 33px;
-    //position: absolute;
     position: fixed;
     z-index: 4;
     background: transparent;
@@ -86,9 +52,8 @@
     margin-top: 33px;
 }
 
-.navbar {
+ .navbar {
   margin-right: 110px;
-  //background: transparent;
   ul{
       display: flex; 
     }
@@ -97,25 +62,26 @@
       list-style: none;
       margin-left: 55px;
       margin-top: 33px; 
-    } 
-}
+    }
+} 
 
-.navegacion{
-  text-decoration: $color-brand;
+ .navegacion{
+  text-decoration: none;
   font-size: 1.6rem;
   color: $color-primary;
   font-family: $font-secondary;
+} 
+
+a:hover{
+  color: $color-brand;
 }
   
 .container_texto{
     position: absolute;
-    //bottom: 90px;
     margin-top: 158px;
     margin-left: -15px;
     width: 554px;
     height: 157px;
-    //transform: translateX(-50%);
-    //display: flex;
   }
 
 
@@ -167,15 +133,8 @@
     border-radius: 50%;
     background-color: #5F6368;
     margin: 0 5px;
-/*     width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid #f1f1f1;
-    margin: 0 5px;
-    background: #f1f1f1; */
   }
   .dot.active {
-    //background: rgb(32, 32, 32);
     background: $color-brand;
 
   }

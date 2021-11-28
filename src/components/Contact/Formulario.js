@@ -2,8 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Form, FloatingLabel } from 'react-bootstrap';
 import '../../assets/css/styles.scss';
-import TxtForm from './TxtForm'
-import { Alert} from "react-bootstrap";
+import TxtForm from './TxtForm';
 
 
 export default () => {
